@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anirudh Ch | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- This links our CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- HERO SECTION (CENTER INTRO) -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Anirudh Ch</h1>
+      <p class="hero-role">Data Science Intern</p>
+      <p class="hero-quote">
+        I love using data, AI and technology to solve real-world problems<br />
+        and build smart, scalable solutions.
+      </p>
+
+      <!-- Social buttons -->
+      <div class="hero-links">
+        <a href="https://github.com/ANIRUDH-87" class="btn-link" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/anirudh-ch87" class="btn-link" target="_blank">LinkedIn</a>
+        <a href="mailto:chvsanirudh@gmail.com" class="btn-link">Mail</a>
+      </div>
+
+      <!-- Project & Resume buttons -->
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Go to Projects</a>
+        <a
+          href="https://drive.google.com/file/d/1SQvMzuCZFfR3VSp5UOMp7Pf920hJ0MDG/view?usp=drive_link"
+          class="btn-outline"
+          target="_blank"
+        >
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>Hey there, I'm Anirudh Ch.</h2>
+
+      <p>
+        I am a dedicated Data Science Intern who enjoys working with real-world datasets and extracting meaningful insights.
+        I love understanding patterns, trends, and building clear visualizations that help in making smarter decisions.
+        I am continuously learning new tools and technologies to improve my analytical and technical skills.
+        Alongside Data Science, I am also developing strong interest in Artificial Intelligence and Machine Learning concepts.
+        I equally enjoy exploring Core Electronics and VLSI fundamentals which strengthen my overall engineering background.
+      </p>
+
+      <!-- 3 Boxes -->
+      <div class="about-roles">
+        <div class="role-box">
+          <strong>Data Science Intern</strong>
+          <p>Hands-on experience in data analysis and visualization.</p>
+        </div>
+
+        <div class="role-box">
+          <strong>AI / ML</strong>
+          <p>Learning essential concepts and applying them practically.</p>
+        </div>
+
+        <div class="role-box">
+          <strong>Core Electronics</strong>
+          <p>Solid foundation in digital logic and VLSI basics.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-image">
+      <img src="main.jpeg" alt="Anirudh Photo" />
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <div class="skills-columns">
+      <!-- Soft Skills -->
+      <div class="skills-column">
+        <h3>Soft Skills</h3>
+        <div class="skill-box">Communication</div>
+        <div class="skill-box">Problem Solving</div>
+        <div class="skill-box">Teamwork</div>
+        <div class="skill-box">Time Management</div>
+        <div class="skill-box">Adaptability</div>
+      </div>
+
+      <!-- Data Science Technical Skills -->
+      <div class="skills-column">
+        <h3>Technical Skills (Data Science)</h3>
+        <div class="skill-box">Python</div>
+        <div class="skill-box">NumPy</div>
+        <div class="skill-box">Pandas</div>
+        <div class="skill-box">Matplotlib / Seaborn</div>
+        <div class="skill-box">Scikit-learn</div>
+        <div class="skill-box">SQL</div>
+        <div class="skill-box">EDA & Data Cleaning</div>
+        <div class="skill-box">Machine Learning Basics</div>
+      </div>
+
+      <!-- Core Electronics Skills -->
+      <div class="skills-column">
+        <h3>Core Electronics Skills</h3>
+        <div class="skill-box">Digital Electronics</div>
+        <div class="skill-box">Verilog / SystemVerilog</div>
+        <div class="skill-box">RTL Design</div>
+        <div class="skill-box">FPGA Basics</div>
+        <div class="skill-box">UART Protocol</div>
+        <div class="skill-box">VLSI Fundamentals</div>
+      </div>
+    </div>
+  </section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects">
+  <h2>My Projects & Experience</h2>
+
+  <div class="projects-grid">
+
+    <!-- Project: Customer Churn -->
+    <article class="project-card">
+      <img src="p5.png" alt="Customer Churn Retention Intelligence System" class="project-image" />
+
+      <h3>Customer Churn Prediction & Retention Intelligence System – Machine Learning Web App</h3>
+
+      <p>
+        An end-to-end machine learning project to predict customer churn in the telecom domain
+        using customer demographics, billing details, and service usage data.
+        The complete ML workflow was implemented in Python and deployed as an interactive
+        Streamlit web application.
+      </p>
+
+
+
+      <div class="project-buttons">
+        <a href="https://github.com/ANIRUDH-87/Customer-Churn-Prediction-Retention-Intelligence-System" class = "project-link "target="_blank">
+          GitHub Repo
+        </a>
+        <a href="https://customer-churn-retention-intelligence-system-3rtsgrzzmbnywgxph.streamlit.app/" class = "project-link" target="_blank">
+          Live Web App
+        </a>
+      </div>
+    </article>
+
+    <!-- Project: Sales Data -->
+    <article class="project-card">
+      <img src="p1.png" class="project-image" />
+      <h3>Sales Data Analysis</h3>
+      <p>Analyzed retail sales data to find trends, best-selling products, and seasonal patterns.</p>
+      <ul>
+        <li>Cleaned and preprocessed raw sales dataset</li>
+        <li>Performed Exploratory Data Analysis (EDA)</li>
+        <li>Visualized sales trends using Matplotlib & Seaborn</li>
+        <li>Generated insights to improve sales strategy</li>
+      </ul>
+      <a href="https://github.com/ANIRUDH-87/sales-data-analysis" class="project-link" target="_blank">
+        GitHub Link
+      </a>
+    </article>
+
+    <!-- Project: ChatGPT Survey -->
+    <article class="project-card">
+      <img src="p2.png" class="project-image" />
+      <h3>ChatGPT / AI Tool Usage Survey – Data Analysis</h3>
+      <p>
+        Analysis of how people use ChatGPT and AI tools based on Google Form responses.
+      </p>
+      <ul>
+        <li>Created Google Form to collect responses</li>
+        <li>Cleaned and processed data using Pandas</li>
+        <li>Performed EDA and visualization</li>
+      </ul>
+      <a href="https://github.com/ANIRUDH-87/mini-project-ChatGPT-survey" class="project-link" target="_blank">
+        GitHub Link
+      </a>
+    </article>
+
+    <!-- Project: Full Stack -->
+    <article class="project-card">
+      <img src="p6.jpg" class="project-image" />
+      <h3>Full-Stack E-Commerce Web Application</h3>
+      <p>
+        A complete full-stack e-commerce application with frontend, backend APIs, and database.
+      </p>
+      <ul>
+        <li>Responsive frontend development</li>
+        <li>Backend APIs for auth and orders</li>
+        <li>Database integration</li>
+        <li>Live deployment</li>
+      </ul>
+      <div class="project-buttons">
+        <a href="https://github.com/ANIRUDH-87/Fashion_Fullstack" class="project-link" target="_blank">
+          GitHub
+        </a>
+        <a href="https://fashion-fullstack.onrender.com/" class="project-link" target="_blank">
+          Live Web App
+        </a>
+      </div>
+    </article>
+
+    <!-- Project: UART -->
+    <article class="project-card">
+      <img src="p4.png" class="project-image" />
+      <h3>UART Protocol – RTL Design & Verification</h3>
+      <p>Designed UART transmitter and receiver modules using Verilog.</p>
+      <ul>
+        <li>UART TX & RX RTL design</li>
+        <li>SystemVerilog testbench</li>
+        <li>Waveform verification</li>
+      </ul>
+      <a href="https://github.com/ANIRUDH-87/UART-Protocol" class="project-link" target="_blank">
+        GitHub Link
+      </a>
+    </article>
+
+  </div>
+</section>
+
+
+  <!-- HOBBIES SECTION -->
+  <section id="hobbies" class="hobbies">
+    <h2>Hobbies</h2>
+
+    <div class="hobbies-wrapper">
+
+       <!-- Hobby: Content Creation (Video + Simple Text) -->
+<div class="hobby-item">
+  <div class="hobby-image">
+    
+      <img src="cont.jpeg" alt="Playing chess" />
+    
+  </div>
+
+  <div class="hobby-text">
+    <h3>Content Creation</h3>
+    <p>I create short educational videos on technology topics.</p>
+    <p>I explain concepts in a simple and easy-to-understand way.</p>
+    <p>Content creation helps me improve communication and clarity.</p>
+  </div>
+</div>
+
+
+
+      <!-- Hobby 1: Chess (Image LEFT, Text RIGHT) -->
+      <div class="hobby-item">
+        <div class="hobby-image">
+          <img src="chess.jpeg" alt="Playing chess" />
+        </div>
+        <div class="hobby-text">
+          <h3>Playing Chess</h3>
+          <p>I regularly play chess to improve my strategic thinking and planning skills.</p>
+          <p>The game helps me analyse situations calmly and choose the best possible move.</p>
+          <p>I enjoy solving chess puzzles and studying various openings and tactics.</p>
+          <p>It improves my pattern recognition and logical decision-making abilities.</p>
+          <p>Chess builds patience and enhances mental discipline.</p>
+          <p>This hobby helps me think more sharply in Data Science & VLSI related work.</p>
+        </div>
+      </div>
+
+      <!-- Hobby 2: Solving Puzzles (Image RIGHT, Text LEFT) -->
+      <div class="hobby-item">
+        <div class="hobby-text">
+          <h3>Solving Puzzles & Sudoku</h3>
+          <p>I enjoy solving logical puzzles, Sudoku, and other brain-teasing challenges.</p>
+          <p>Puzzles help me sharpen my analytical and logical thinking.</p>
+          <p>I love identifying hidden patterns and solving problems step by step.</p>
+          <p>This improves my concentration and keeps my mind active.</p>
+          <p>Puzzles also help me stay patient and calm during complex tasks.</p>
+          <p>This hobby supports my analytical mindset for Data Science projects.</p>
+        </div>
+        <div class="hobby-image">
+          <img src="puzz.jpeg" alt="Solving puzzles" />
+        </div>
+      </div>
+
+      <!-- Hobby 3: Playing Cricket (Image LEFT, Text RIGHT) -->
+      <div class="hobby-item">
+        <div class="hobby-image">
+          <img src="cricket.jpeg" alt="Playing cricket" />
+        </div>
+        <div class="hobby-text">
+          <h3>Playing Cricket</h3>
+          <p>Cricket is my favourite outdoor sport and helps me stay physically active.</p>
+          <p>It teaches teamwork, communication, and coordination.</p>
+          <p>I enjoy both batting and bowling depending on the game situation.</p>
+          <p>Cricket helps me make quick decisions under pressure.</p>
+          <p>It refreshes my mind and gives me a break from study workloads.</p>
+          <p>This hobby keeps me balanced both mentally and physically.</p>
+        </div>
+      </div>
+
+      <!-- Hobby 4: Learning New Technologies (Image RIGHT, Text LEFT) -->
+      <div class="hobby-item">
+        <div class="hobby-text">
+          <h3>Learning New Technologies</h3>
+          <p>I actively explore new tools and concepts in AI, ML, and VLSI design.</p>
+          <p>I enjoy learning modern frameworks and experimenting with projects.</p>
+          <p>This hobby helps me understand real-world applications of technology.</p>
+          <p>I keep myself updated with the latest advancements in tech.</p>
+          <p>Learning continuously helps me improve my practical knowledge.</p>
+          <p>This hobby motivates me to grow in the tech field every day.</p>
+        </div>
+        <div class="hobby-image">
+          <img src="Tech.jpeg" alt="Learning technologies" />
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  </section>
+
+  <!-- Contribution / Call-to-Action Message -->
+  <div class="contribution-message">
+    <p>
+      If my profile aligns with your requirements, I would be excited to
+      contribute to your organization. Please find my details and resume below.
+    </p>
+  </div>
+
+  
+
+
+  <div class="resume-bottom">
+    <a
+      href="https://drive.google.com/file/d/1SQvMzuCZFfR3VSp5UOMp7Pf920hJ0MDG/view?usp=drive_link"
+      class="btn-outline"
+      target="_blank"
+    >
+      Download Resume
+    </a>
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-contact">
+        <p>📞 <a href="tel:+9187905444362">+91 8790544362</a></p>
+        <p>✉️ <a href="mailto:chvsanirudh@gmail.com">chvsanirudh@gmail.com</a></p>
+        <p>
+          🔗
+          <a href="https://www.linkedin.com/in/anirudh-ch87" target="_blank">LinkedIn</a> |
+          <a href="https://github.com/ANIRUDH-87" target="_blank">GitHub</a> |
+          <a href="https://www.youtube.com/channel/UCclg7QMmSOh_64wdSMTLDxw" target="_blank">YouTube</a>
+        </p>
+      </div>
+      <div class="footer-nav">
+        <p><strong>Anirudh Ch</strong></p>
+        <p>Data Science Intern | AI/ML & Core Electronics Enthusiast</p>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">Introduction</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#hobbies">Hobbies</a>
+          <a href="#contact">Get in Touch</a>
+        </nav>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 Anirudh Ch. All rights reserved.</p>
+  </footer>
+
+  <!-- JS file for future animations -->
+  <script src="script.js"></script>
+</body>
+</html>
+
