@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
   <meta charset="UTF-8" />
   <title>Anirudh Ch | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,359 +12,1934 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="particle-canvas"></canvas>
 
-  <!-- HERO SECTION (CENTER INTRO) -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-name">Anirudh Ch</h1>
-      <p class="hero-role">Data Science Intern</p>
-      <p class="hero-quote">
-        I love using data, AI and technology to solve real-world problems<br />
-        and build smart, scalable solutions.
-      </p>
 
-      <!-- Social buttons -->
-      <div class="hero-links">
-        <a href="https://github.com/ANIRUDH-87" class="btn-link" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/anirudh-ch87" class="btn-link" target="_blank">LinkedIn</a>
-        <a href="mailto:chvsanirudh@gmail.com" class="btn-link">Mail</a>
-      </div>
 
-      <!-- Project & Resume buttons -->
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">Go to Projects</a>
-        <a
-          href="https://drive.google.com/file/d/1SQvMzuCZFfR3VSp5UOMp7Pf920hJ0MDG/view?usp=drive_link"
-          class="btn-outline"
-          target="_blank"
-        >
-          Download Resume
-        </a>
-      </div>
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="home" class="hero-section">
+
+<!-- TOP RIGHT CONTROLS -->
+<div class="hero-top-controls">
+
+  <!-- CONTACT -->
+  <a href="#contact" class="hero-contact-link">
+    Contact
+  </a>
+
+  <!-- THEME DROPDOWN -->
+  <div class="theme-dropdown">
+
+    <button
+      type="button"
+      class="theme-dropdown-btn"
+      id="themeDropdownBtn"
+      aria-expanded="false"
+    >
+      Theme
+      <span class="theme-arrow"></span>
+    </button>
+
+    <div class="theme-menu" id="themeMenu">
+
+      <button type="button" class="theme-option" data-theme="dark">
+        <span>☾</span>
+        Dark Mode
+      </button>
+
+      <button type="button" class="theme-option" data-theme="light">
+        <span>☀</span>
+        Light Mode
+      </button>
+
     </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-    <div class="about-text">
-      <h2>Hey there, I'm Anirudh Ch.</h2>
-
-      <p>
-        I am a dedicated Data Science Intern who enjoys working with real-world datasets and extracting meaningful insights.
-        I love understanding patterns, trends, and building clear visualizations that help in making smarter decisions.
-        I am continuously learning new tools and technologies to improve my analytical and technical skills.
-        Alongside Data Science, I am also developing strong interest in Artificial Intelligence and Machine Learning concepts.
-        I equally enjoy exploring Core Electronics and VLSI fundamentals which strengthen my overall engineering background.
-      </p>
-
-      <!-- 3 Boxes -->
-      <div class="about-roles">
-        <div class="role-box">
-          <strong>Data Science Intern</strong>
-          <p>Hands-on experience in data analysis and visualization.</p>
-        </div>
-
-        <div class="role-box">
-          <strong>AI / ML</strong>
-          <p>Learning essential concepts and applying them practically.</p>
-        </div>
-
-        <div class="role-box">
-          <strong>Core Electronics</strong>
-          <p>Solid foundation in digital logic and VLSI basics.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-image">
-      <img src="main.jpeg" alt="Anirudh Photo" />
-    </div>
-  </section>
-
-  <!-- SKILLS SECTION -->
-  <section id="skills" class="skills">
-    <h2>My Skills</h2>
-    <div class="skills-columns">
-      <!-- Soft Skills -->
-      <div class="skills-column">
-        <h3>Soft Skills</h3>
-        <div class="skill-box">Communication</div>
-        <div class="skill-box">Problem Solving</div>
-        <div class="skill-box">Teamwork</div>
-        <div class="skill-box">Time Management</div>
-        <div class="skill-box">Adaptability</div>
-      </div>
-
-      <!-- Data Science Technical Skills -->
-      <div class="skills-column">
-        <h3>Technical Skills (Data Science)</h3>
-        <div class="skill-box">Python</div>
-        <div class="skill-box">NumPy</div>
-        <div class="skill-box">Pandas</div>
-        <div class="skill-box">Matplotlib / Seaborn</div>
-        <div class="skill-box">Scikit-learn</div>
-        <div class="skill-box">SQL</div>
-        <div class="skill-box">EDA & Data Cleaning</div>
-        <div class="skill-box">Machine Learning Basics</div>
-      </div>
-
-      <!-- Core Electronics Skills -->
-      <div class="skills-column">
-        <h3>Core Electronics Skills</h3>
-        <div class="skill-box">Digital Electronics</div>
-        <div class="skill-box">Verilog / SystemVerilog</div>
-        <div class="skill-box">RTL Design</div>
-        <div class="skill-box">FPGA Basics</div>
-        <div class="skill-box">UART Protocol</div>
-        <div class="skill-box">VLSI Fundamentals</div>
-      </div>
-    </div>
-  </section>
-
-<!-- PROJECTS SECTION -->
-<section id="projects" class="projects">
-  <h2>My Projects & Experience</h2>
-
-  <div class="projects-grid">
-
-    <!-- Project: AI-Code-review-system -->
-
-    <article class="project-card">
-      <img src="pre.jpg" alt="Customer Churn Retention Intelligence System" class="project-image" />
-
-      <h3>AI Code Review System</h3>
-
-      <p>
-        Developed an AI Code Review System that analyzes Python code and provides intelligent 
-        feedback on bugs and best practices. The system simulates real-world code review by evaluating code and suggesting improvements. 
-        Built using Python, it helps developers enhance code quality efficiently. This project showcases my skills in integrating AI with 
-        practical software workflows.
-      </p>
-
-
-
-      <div class="project-buttons">
-        <a href="https://github.com/ANIRUDH-87/ai-code-review-system" class = "project-link "target="_blank">
-          GitHub Repo
-        </a>
-        <a href="https://anirudhiu5-ai-code-review-system.hf.space/docs" class = "project-link" target="_blank">
-          Live Demo
-        </a>
-      </div>
-    </article>
-
-    <!-- Project: Predictive  -->
-
-    <article class="project-card">
-      <img src="ai.png" alt="Predictive Intelligence model for Early detection of Operational Inefficiencies" class="project-image" />
-
-      <h3>Predictive Intelligence model for Early detection of Operational Inefficiencies</h3>
-
-      <p>
-        I built a predictive intelligence system to identify early signs of operational inefficiencies using historical data. 
-        I performed data cleaning, preprocessing, and exploratory analysis to uncover patterns and trends. Using feature engineering 
-        and machine learning models, I predicted inefficiency risks with reliable evaluation metrics. 
-      </p>
-
-
-
-      <div class="project-buttons">
-        <a href="https://github.com/ANIRUDH-87/Predictive_Intelligence_Model" class = "project-link "target="_blank">
-          GitHub Repo
-        </a>
-        <a href="https://predictiveintelligencemodel-oyylj6vmx3t3wjebpkvrsn.streamlit.app/" class = "project-link" target="_blank">
-          Live app
-        </a>
-      </div>
-    </article>
-
-
-
-
-    <!-- Project: Customer Churn -->
-    <article class="project-card">
-      <img src="p5.png" alt="Customer Churn Retention Intelligence System" class="project-image" />
-
-      <h3>Customer Churn Prediction & Retention Intelligence System – Machine Learning Web App</h3>
-
-      <p>
-        An end-to-end machine learning project to predict customer churn in the telecom domain
-        using customer demographics, billing details, and service usage data.
-        The complete ML workflow was implemented in Python and deployed as an interactive
-        Streamlit web application.
-      </p>
-
-
-
-      <div class="project-buttons">
-        <a href="https://github.com/ANIRUDH-87/Customer-Churn-Prediction-Retention-Intelligence-System" class = "project-link "target="_blank">
-          GitHub Repo
-        </a>
-        <a href=https://drive.google.com/file/d/15VdrMDUmGXdcVZV7vY00KWAZVQA-A1xH/view?usp=drivesdk class = "project-link" target="_blank">
-          Power BI Dashboard
-        </a>
-        <a href="https://customer-churn-retention-intelligence-system-3rtsgrzzmbnywgxph.streamlit.app/" 
-   class="project-link" 
-   target="_blank">
-   Live Web App
-</a>
-      </div>
-    </article>
-
-    <!-- Project: Sales Data -->
-    <article class="project-card">
-      <img src="p1.png" class="project-image" />
-      <h3>Sales Data Analysis</h3>
-      <p>Analyzed retail sales data to find trends, best-selling products, and seasonal patterns.</p>
-      <ul>
-        <li>Cleaned and preprocessed raw sales dataset</li>
-        <li>Performed Exploratory Data Analysis (EDA)</li>
-        <li>Visualized sales trends using Matplotlib & Seaborn</li>
-        <li>Generated insights to improve sales strategy</li>
-      </ul>
-      <a href="https://github.com/ANIRUDH-87/sales-data-analysis" class="project-link" target="_blank">
-        GitHub Link
-      </a>
-    </article>
-
-    <!-- Project: ChatGPT Survey -->
-    <article class="project-card">
-      <img src="p2.png" class="project-image" />
-      <h3>ChatGPT / AI Tool Usage Survey – Data Analysis</h3>
-      <p>
-        Analysis of how people use ChatGPT and AI tools based on Google Form responses.
-      </p>
-      <ul>
-        <li>Created Google Form to collect responses</li>
-        <li>Cleaned and processed data using Pandas</li>
-        <li>Performed EDA and visualization</li>
-      </ul>
-      <a href="https://github.com/ANIRUDH-87/mini-project-ChatGPT-survey" class="project-link" target="_blank">
-        GitHub Link
-      </a>
-    </article>
-
-    <!-- Project: Full Stack -->
-    <article class="project-card">
-      <img src="p6.jpg" class="project-image" />
-      <h3>Full-Stack E-Commerce Web Application</h3>
-      <p>
-        A complete full-stack e-commerce application with frontend, backend APIs, and database.
-      </p>
-      <ul>
-        <li>Responsive frontend development</li>
-        <li>Backend APIs for auth and orders</li>
-        <li>Database integration</li>
-        <li>Live deployment</li>
-      </ul>
-      <div class="project-buttons">
-        <a href="https://github.com/ANIRUDH-87/Fashion_Fullstack" class="project-link" target="_blank">
-          GitHub
-        </a>
-        <a href="https://fashion-fullstack.onrender.com/" class="project-link" target="_blank">
-          Live Web App
-        </a>
-      </div>
-    </article>
-
-    <!-- Project: UART -->
-    <article class="project-card">
-      <img src="p4.png" class="project-image" />
-      <h3>UART Protocol – RTL Design & Verification</h3>
-      <p>Designed UART transmitter and receiver modules using Verilog.</p>
-      <ul>
-        <li>UART TX & RX RTL design</li>
-        <li>SystemVerilog testbench</li>
-        <li>Waveform verification</li>
-      </ul>
-      <a href="https://github.com/ANIRUDH-87/UART-Protocol" class="project-link" target="_blank">
-        GitHub Link
-      </a>
-    </article>
 
   </div>
+
+</div>
+
+    <!-- Background decorative elements -->
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="hero-container">
+
+      <!-- LEFT SIDE -->
+      <div class="hero-content">
+
+        <p class="hero-eyebrow">
+          SOFTWARE DEVELOPER
+        </p>
+
+        <h1 class="hero-title">
+          Anirudh <span>Ch</span>
+        </h1>
+
+        <h2 class="hero-subtitle">
+          .NET Developer
+          <span class="hero-divider">·</span>
+          Software Engineer
+        </h2>
+
+        <p class="hero-description">
+          I build reliable and scalable software solutions using
+          modern .NET technologies, with a strong engineering
+          foundation in electronics and an interest in VLSI and
+          intelligent systems.
+        </p>
+
+        <!-- ACTION BUTTONS -->
+        <div class="hero-actions-new">
+
+          <a href="#projects" class="hero-btn hero-btn-primary">
+            View My Work
+            <span>↗</span>
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/1AYDPdddKdXpguBrXmmGu1gkfIbe9sAwZ/view?usp=sharing"
+            target="_blank"
+            class="hero-btn hero-btn-secondary"
+          >
+            View Resume
+          </a>
+
+        </div>
+
+        <!-- SOCIAL LINKS -->
+        <div class="hero-socials">
+
+          <a
+            href="https://www.linkedin.com/in/anirudh-ch87"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+
+          <span>/</span>
+
+          <a
+            href="https://github.com/ANIRUDH-87"
+            target="_blank"
+          >
+            GitHub
+          </a>
+
+          <span>/</span>
+
+          <a href="mailto:chvsanirudh@gmail.com">
+            Email
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT SIDE -->
+      <div class="hero-visual">
+
+        <div class="hero-image-wrapper">
+
+          <div class="hero-image-frame"></div>
+
+          <img
+            src="main.jpeg"
+            alt="Anirudh Ch - Software Developer"
+            class="hero-image"
+          />
+
+          <!-- <div class="hero-image-label">
+            <span class="status-dot"></span>
+            Building & Learning
+          </div> -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- BOTTOM SCROLL INDICATOR -->
+    <div class="hero-scroll">
+      <span>SCROLL TO EXPLORE</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+<!-- =====================================================
+     PROFESSIONAL ABOUT SECTION
+     ===================================================== -->
+
+<section id="about" class="about-section">
+
+  <div class="about-background">
+    <div class="about-glow about-glow-one"></div>
+    <div class="about-glow about-glow-two"></div>
+    <div class="about-grid"></div>
+  </div>
+
+
+  <div class="about-container">
+
+    <!-- Section heading -->
+
+    <div class="about-heading">
+
+      <p class="section-eyebrow">
+        ABOUT
+      </p>
+
+      <h2>
+        Software Developer 
+      </h2>
+
+    </div>
+
+
+    <!-- Short professional introduction -->
+
+    <div class="about-introduction">
+
+      <p>
+        I currently work as a
+        <strong>Software Developer at Jaaji Technologies</strong>,
+        primarily focused on .NET development and software solutions.
+        My work also involves exploring AI and LLM-based applications,
+        including local LLM environments.
+      </p>
+
+      <p>
+        With a background in Electronics and Communication Engineering,
+        my experience spans software development, data science, AI,
+        and digital electronics. My long-term technical direction is
+        toward the <strong>semiconductor industry</strong>, with a
+        particular interest in VLSI and digital design.
+      </p>
+
+    </div>
+
+
+
+
+      
+
+
+
+
+    <!-- Content creation -->
+
+    <div class="about-content-creator">
+
+      <span class="creator-label">
+        ALSO
+      </span>
+
+      <p>
+        Alongside my software career, I am a
+        <a
+          href="https://www.instagram.com/electrofy__?stkn=MWt1dGJ4ZDJyM2k4cw=="
+          target="_blank"
+          rel="noopener noreferrer"
+        >Technical content creator</a>
+        creating content around electronics, engineering,
+        and technology.
+      </p>
+
+    </div>
+
+
+  </div>
+
 </section>
 
 
-  <!-- HOBBIES SECTION -->
-  <section id="hobbies" class="hobbies">
-    <h2>Hobbies</h2>
 
-    <div class="hobbies-wrapper">
 
-       <!-- Hobby: Content Creation (Video + Simple Text) -->
-<div class="hobby-item">
-  <div class="hobby-image">
-    
-      <img src="cont.jpeg" alt="Playing chess" />
-    
+
+<!-- PROFESSIONAL EXPERIENCE -->
+<section id="experience" class="experience-section">
+
+  <div class="experience-background">
+    <div class="experience-glow"></div>
+    <div class="experience-grid"></div>
   </div>
 
-  <div class="hobby-text">
-    <h3>Content Creation</h3>
-    <p>I create short educational videos on technology topics.</p>
-    <p>I explain concepts in a simple and easy-to-understand way.</p>
-    <p>Content creation helps me improve communication and clarity.</p>
+  <div class="experience-container">
+
+    <div class="experience-heading">
+
+      <p class="section-eyebrow">
+        EXPERIENCE
+      </p>
+
+      <h2>
+        Professional
+        <span>Experience.</span>
+      </h2>
+
+    </div>
+
+
+    <div class="experience-list">
+
+
+     <!-- CURRENT ROLE -->
+
+<article class="experience-item current-role">
+
+  <div class="experience-period">
+    2026 — Present
   </div>
-</div>
 
+  <div class="experience-content">
 
+    <div class="experience-title-row">
 
-      <!-- Hobby 2: Solving Puzzles (Image RIGHT, Text LEFT) -->
-      <div class="hobby-item">
-        <div class="hobby-text">
-          <h3>Solving Puzzles & Sudoku</h3>
-          <p>I enjoy solving logical puzzles, Sudoku, and other brain-teasing challenges.</p>
-          <p>Puzzles help me sharpen my analytical and logical thinking.</p>
-          <p>I love identifying hidden patterns and solving problems step by step.</p>
-          <p>This improves my concentration and keeps my mind active.</p>
-          <p>Puzzles also help me stay patient and calm during complex tasks.</p>
-          <p>This hobby supports my analytical mindset for Data Science projects.</p>
-        </div>
-        <div class="hobby-image">
-          <img src="puzz.jpeg" alt="Solving puzzles" />
-        </div>
+      <div>
+        <h3>
+          Software Developer
+        </h3>
+
+        <p class="experience-company">
+          Jaaji Technologies
+        </p>
       </div>
 
-      <!-- Hobby 3: Playing Cricket (Image LEFT, Text RIGHT) -->
-      <div class="hobby-item">
-        <div class="hobby-image">
-          <img src="cricket.jpeg" alt="Playing cricket" />
+      <span class="experience-status">
+        CURRENT
+      </span>
+
+    </div>
+
+
+    <p class="experience-description">
+      Working primarily with the .NET ecosystem on the
+      <strong>inSisAI</strong> project, contributing to
+      UI/UX development and software functionality based on
+      product requirements. Also working with LLM-based
+      workflows and local LLM environments to integrate
+      AI capabilities into software applications.
+    </p>
+
+
+    <div class="experience-tech">
+      <span>.NET</span>
+      <span>C#</span>
+      <span>UI / UX</span>
+      <span>LLMs</span>
+    </div>
+
+  </div>
+
+</article>
+
+      <!-- DEVELOPER INTERNSHIP -->
+
+      <article class="experience-item">
+
+        <div class="experience-period">
+          May 2026 — Oct 2026
         </div>
-        <div class="hobby-text">
-          <h3>Playing Cricket</h3>
-          <p>Cricket is my favourite outdoor sport and helps me stay physically active.</p>
-          <p>It teaches teamwork, communication, and coordination.</p>
-          <p>I enjoy both batting and bowling depending on the game situation.</p>
-          <p>Cricket helps me make quick decisions under pressure.</p>
-          <p>It refreshes my mind and gives me a break from study workloads.</p>
-          <p>This hobby keeps me balanced both mentally and physically.</p>
+
+        <div class="experience-content">
+
+          <div class="experience-title-row">
+
+            <div>
+              <h3>
+                Developer Intern
+              </h3>
+
+              <p class="experience-company">
+                Jaaji Technologies
+              </p>
+            </div>
+
+          </div>
+
+
+          <p class="experience-description">
+            Worked as a .NET developer, building UI and backend
+            functionality based on company requirements. Collaborated
+            with experienced professionals while developing practical
+            software engineering skills.
+          </p>
+
+
+          <div class="experience-tech">
+            <span>.NET</span>
+            <span>C#</span>
+            <span>UI Development</span>
+            <span>Backend</span>
+          </div>
+
         </div>
+
+      </article>
+
+
+      <!-- VCODEZ -->
+
+<article class="experience-item">
+
+  <div class="experience-period">
+  Nov 2025 — Feb 2026
+  </div>
+
+  <div class="experience-content">
+
+    <div class="experience-title-row">
+
+      <div>
+        <h3>
+          Data Science Intern
+        </h3>
+
+        <p class="experience-company">
+          VCODEZ
+        </p>
       </div>
 
-      <!-- Hobby 4: Learning New Technologies (Image RIGHT, Text LEFT) -->
-      <div class="hobby-item">
-        <div class="hobby-text">
-          <h3>Learning New Technologies</h3>
-          <p>I actively explore new tools and concepts in AI, ML, and VLSI design.</p>
-          <p>I enjoy learning modern frameworks and experimenting with projects.</p>
-          <p>This hobby helps me understand real-world applications of technology.</p>
-          <p>I keep myself updated with the latest advancements in tech.</p>
-          <p>Learning continuously helps me improve my practical knowledge.</p>
-          <p>This hobby motivates me to grow in the tech field every day.</p>
-        </div>
-        <div class="hobby-image">
-          <img src="Tech.jpeg" alt="Learning technologies" />
-        </div>
-      </div>
+    </div>
+
+
+    <p class="experience-description">
+      Worked on a <strong>Predictive Intelligence Model for Early
+      Detection of Operational Inefficiencies</strong>, applying
+      data analysis, preprocessing, exploratory analysis, feature
+      engineering, and machine learning techniques to identify
+      operational patterns and potential inefficiencies.
+    </p>
+
+
+    <div class="experience-tech">
+      <span>Python</span>
+      <span>Pandas</span>
+      <span>Machine Learning</span>
+      <span>Data Analysis</span>
+    </div>
+
+  </div>
+
+</article>
 
 
     </div>
-  </section>
 
-  </section>
+  </div>
+
+</section>
+
+<!-- 
+     PROJECT SHOWCASE
+      -->
+
+<section id="projects" class="project-showcase">
+
+  <div class="project-showcase-inner">
+
+    <!-- SECTION INTRO -->
+
+    <div class="project-intro">
+
+      <span class="project-label">
+        SELECTED WORK
+      </span>
+
+      <h2>
+        Projects built through
+        <span>hands-on engineering.</span>
+      </h2>
+
+      <p>
+        A selection of projects across data science, software
+        development, and RTL design, showing how I apply
+        engineering concepts to practical problems.
+      </p>
+
+    </div>
+
+
+    <!-- =================================================
+         DATA SCIENCE & MACHINE LEARNING
+         ================================================= -->
+
+    <div class="project-group">
+
+      <div class="project-group-heading">
+
+        <span>01</span>
+
+        <div>
+          <p>DATA SCIENCE</p>
+          <h3>Machine Learning & Analytics</h3>
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 01 -->
+
+      <article class="project-showcase-item">
+
+        <div class="project-visual">
+
+          <img
+            src="ai.png"
+            alt="Predictive Intelligence Model"
+          />
+
+        </div>
+
+
+        <div class="project-details">
+
+          <div class="project-number">
+            PROJECT 01
+          </div>
+
+          <h4>
+            Predictive Intelligence for Early Detection
+            of Operational Inefficiencies
+          </h4>
+
+          <p class="project-description">
+
+            A predictive intelligence system developed to
+            identify early indicators of operational
+            inefficiencies using historical data.
+
+            The project involved data cleaning,
+            preprocessing, exploratory analysis,
+            feature engineering, and machine learning
+            to identify patterns and estimate
+            inefficiency risks.
+
+          </p>
+
+
+          <div class="project-developed">
+
+            <span>DEVELOPED THROUGH</span>
+
+            <p>
+              Data Cleaning · EDA · Feature Engineering ·
+              Machine Learning · Model Evaluation
+            </p>
+
+          </div>
+
+
+          <div class="project-tech">
+
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
+            <span>Streamlit</span>
+
+          </div>
+
+
+          <div class="project-actions">
+
+            <a
+              href="https://github.com/ANIRUDH-87/Predictive_Intelligence_Model"
+              target="_blank"
+            >
+              GitHub Repository ↗
+            </a>
+
+            <a
+              href="https://predictiveintelligencemodel-oyylj6vmx3t3wjebpkvrsn.streamlit.app/"
+              target="_blank"
+            >
+              Live Application ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 02 -->
+
+      <article class="project-showcase-item reverse">
+
+        <div class="project-visual">
+
+          <img
+            src="p5.png"
+            alt="Customer Churn Prediction"
+          />
+
+        </div>
+
+
+        <div class="project-details">
+
+          <div class="project-number">
+            PROJECT 02
+          </div>
+
+          <h4>
+            Customer Churn Prediction &
+            Retention Intelligence
+          </h4>
+
+          <p class="project-description">
+
+            An end-to-end machine learning project focused
+            on predicting telecom customer churn using
+            customer demographics, billing information,
+            and service usage data.
+
+            The workflow covers data preparation,
+            exploratory analysis, feature engineering,
+            model development, evaluation, and deployment.
+
+          </p>
+
+
+          <div class="project-developed">
+
+            <span>DEVELOPED THROUGH</span>
+
+            <p>
+              Data Analysis · Feature Engineering ·
+              Classification · Model Evaluation · Deployment
+            </p>
+
+          </div>
+
+
+          <div class="project-tech">
+
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
+            <span>Streamlit</span>
+            <span>Power BI</span>
+
+          </div>
+
+
+          <div class="project-actions">
+
+            <a
+              href="https://github.com/ANIRUDH-87/Customer-Churn-Prediction-Retention-Intelligence-System"
+              target="_blank"
+            >
+              GitHub Repository ↗
+            </a>
+
+            <a
+              href="https://customer-churn-retention-intelligence-system-3rtsgrzzmbnywgxph.streamlit.app/"
+              target="_blank"
+            >
+              Live Application ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 03 -->
+
+      <article class="project-showcase-item">
+
+        <div class="project-visual">
+
+          <img
+            src="p1.png"
+            alt="Sales Data Analysis"
+          />
+
+        </div>
+
+
+        <div class="project-details">
+
+          <div class="project-number">
+            PROJECT 03
+          </div>
+
+          <h4>
+            Sales Data Analysis
+          </h4>
+
+          <p class="project-description">
+
+            Analyzed retail sales data to identify sales
+            trends, best-performing products, and seasonal
+            patterns.
+
+            The project focused on transforming raw sales
+            data into structured insights through
+            preprocessing, exploratory analysis, and
+            visualization.
+
+          </p>
+
+
+          <div class="project-developed">
+
+            <span>DEVELOPED THROUGH</span>
+
+            <p>
+              Data Cleaning · EDA · Data Visualization ·
+              Pattern Analysis
+            </p>
+
+          </div>
+
+
+          <div class="project-tech">
+
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Matplotlib</span>
+            <span>Seaborn</span>
+
+          </div>
+
+
+          <div class="project-actions">
+
+            <a
+              href="https://github.com/ANIRUDH-87/sales-data-analysis"
+              target="_blank"
+            >
+              GitHub Repository ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 04 -->
+
+      <article class="project-showcase-item reverse">
+
+        <div class="project-visual">
+
+          <img
+            src="p2.png"
+            alt="ChatGPT AI Tool Usage Survey"
+          />
+
+        </div>
+
+
+        <div class="project-details">
+
+          <div class="project-number">
+            PROJECT 04
+          </div>
+
+          <h4>
+            ChatGPT / AI Tool Usage Survey
+          </h4>
+
+          <p class="project-description">
+
+            A data analysis project based on survey responses
+            collected to understand how people use ChatGPT
+            and other AI tools.
+
+            The project covered response collection,
+            data cleaning, exploratory analysis, and
+            visualization.
+
+          </p>
+
+
+          <div class="project-developed">
+
+            <span>DEVELOPED THROUGH</span>
+
+            <p>
+              Data Collection · Data Cleaning · EDA ·
+              Visualization
+            </p>
+
+          </div>
+
+
+          <div class="project-tech">
+
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Data Analysis</span>
+            <span>Visualization</span>
+
+          </div>
+
+
+          <div class="project-actions">
+
+            <a
+              href="https://github.com/ANIRUDH-87/mini-project-ChatGPT-survey"
+              target="_blank"
+            >
+              GitHub Repository ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- =================================================
+         SOFTWARE DEVELOPMENT
+         ================================================= -->
+
+    <div class="project-group software-group">
+
+      <div class="project-group-heading">
+
+        <span>02</span>
+
+        <div>
+          <p>SOFTWARE DEVELOPMENT</p>
+          <h3>Full-Stack Application</h3>
+        </div>
+
+      </div>
+
+
+      <article class="project-showcase-item">
+
+        <div class="project-visual">
+
+          <img
+            src="p6.jpg"
+            alt="Full-Stack E-Commerce Web Application"
+          />
+
+        </div>
+
+
+        <div class="project-details">
+
+          <div class="project-number">
+            PROJECT 05
+          </div>
+
+          <h4>
+            Full-Stack E-Commerce
+            Web Application
+          </h4>
+
+          <p class="project-description">
+
+            A complete full-stack e-commerce application
+            covering responsive frontend development,
+            backend APIs, authentication, database
+            integration, and live deployment.
+
+          </p>
+
+
+          <div class="project-developed">
+
+            <span>DEVELOPED THROUGH</span>
+
+            <p>
+              Frontend Development · Backend APIs ·
+              Authentication · Database Integration · Deployment
+            </p>
+
+          </div>
+
+
+          <div class="project-tech">
+
+            <span>Frontend</span>
+            <span>Backend</span>
+            <span>REST APIs</span>
+            <span>Database</span>
+
+          </div>
+
+
+          <div class="project-actions">
+
+            <a
+              href="https://github.com/ANIRUDH-87/Fashion_Fullstack"
+              target="_blank"
+            >
+              GitHub Repository ↗
+            </a>
+
+            <a
+              href="https://fashion-fullstack.onrender.com/"
+              target="_blank"
+            >
+              Live Application ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    
+
+<!-- =================================================
+     STUDENT PROBLEM-SOLVING INITIATIVE
+     ================================================= -->
+
+<div class="project-group strideup-group">
+
+  <div class="project-group-heading">
+
+    <span>03</span>
+
+    <div>
+      <p>STUDENT PROBLEM-SOLVING INITIATIVE</p>
+      <h3>Student-Focused Application</h3>
+    </div>
+
+  </div>
+
+
+  <!-- STRIDEUP -->
+
+  <article class="project-showcase-item reverse">
+
+    <!-- IMAGE -->
+    <div class="project-visual">
+
+      <!-- ADD YOUR STRIDEUP IMAGE HERE -->
+      <img
+        src="p7.png"
+        alt="StrideUp Student Study and Formula Reminder"
+      />
+
+    </div>
+
+
+    <!-- DETAILS -->
+
+    <div class="project-details">
+
+      <div class="project-number">
+        PROJECT 06
+      </div>
+
+      <h4>
+        StrideUp —
+        Student Study & Formula Reminder
+      </h4>
+
+      <p class="project-description">
+
+        A student-focused application designed to solve
+        a simple problem faced by students — remembering
+        important formulas and maintaining a consistent
+        study routine.
+
+        The application allows students to organize
+        formulas by date and receive scheduled reminders
+        at their preferred times for regular revision.
+
+      </p>
+
+
+      <div class="project-developed">
+
+        <span>FOCUS</span>
+
+        <p>
+          Student Problem Solving · UI Design ·
+          User Flow · AI-Assisted Development
+        </p>
+
+      </div>
+
+
+      <div class="project-tech">
+
+        <span>UI Design</span>
+        <span>Notifications</span>
+        <span>Time-Based Reminders</span>
+        <span>AI-Assisted Development</span>
+
+      </div>
+
+
+      <div class="project-actions">
+
+        <a
+          href="#"
+          target="_blank"
+        >
+          Project Details ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</div>
+
+
+<!-- =================================================
+     VLSI PROJECTS
+     ================================================= -->
+
+<div class="project-group vlsi-project-group">
+
+  <div class="project-group-heading">
+
+    <span>04</span>
+
+    <div>
+      <p>VLSI & DIGITAL DESIGN</p>
+      <h3>RTL & Verification Projects</h3>
+    </div>
+
+  </div>
+
+
+  <!-- HORIZONTAL VLSI PROJECT SCROLL -->
+
+  <div class="vlsi-project-track">
+
+    <div class="vlsi-project-container">
+
+      <article class="vlsi-project-card">
+
+  <div class="vlsi-project-image">
+
+    <!-- ADD UART PROJECT IMAGE HERE -->
+
+    <img
+      src="UART.png"
+      alt="UART Protocol Design"
+    />
+
+  </div>
+
+
+  <div class="vlsi-project-content">
+
+    <span class="vlsi-project-number">
+      VLSI PROJECT 01
+    </span>
+
+    <h4>
+      UART Protocol
+    </h4>
+
+
+    <ul>
+
+      <li>
+        Designed a UART communication system using Verilog RTL.
+      </li>
+
+      <li>
+        Implemented serial data transmission and reception.
+      </li>
+
+      <li>
+        Worked with UART start, data, and stop bit handling.
+      </li>
+
+      <li>
+        Verified UART communication functionality through simulation.
+      </li>
+
+    </ul>
+
+
+    <a
+      href="https://github.com/ANIRUDH-87/UART-Protocol"
+      target="_blank"
+      class="vlsi-github-btn"
+    >
+      GitHub Repository ↗
+    </a>
+
+  </div>
+
+</article>
+      <!-- =========================================
+           PROJECT 01 — AXI4-LITE
+           ========================================= -->
+
+      <article class="vlsi-project-card">
+
+        <div class="vlsi-project-image">
+
+          <!-- ADD AXI4-LITE PROJECT IMAGE HERE -->
+
+          <img
+            src="AXI4_sim.png"
+            alt="AXI4-Lite Protocol Design"
+          />
+
+        </div>
+
+
+        <div class="vlsi-project-content">
+
+          <span class="vlsi-project-number">
+            VLSI PROJECT 02
+          </span>
+
+          <h4>
+            AXI4-Lite Protocol
+          </h4>
+
+
+          <ul>
+
+            <li>
+              Designed an AXI4-Lite interface using RTL design concepts.
+            </li>
+
+            <li>
+              Implemented read and write transaction handling.
+            </li>
+
+            <li>
+              Worked with AXI4-Lite channels and handshake signals.
+            </li>
+
+            <li>
+              Developed and tested the design using Verilog.
+            </li>
+
+          </ul>
+
+
+          <a
+            href="https://github.com/ANIRUDH-87/-AXI4-Lite-Protocol"
+            target="_blank"
+            class="vlsi-github-btn"
+          >
+            GitHub Repository ↗
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- =========================================
+           PROJECT 04 — DIGITAL CLOCK FSM
+           ========================================= -->
+
+      <article class="vlsi-project-card">
+
+        <div class="vlsi-project-image">
+
+          <!-- ADD DIGITAL CLOCK IMAGE HERE -->
+
+          <img
+            src="Digital_Clock.png"
+            alt="Digital Clock FSM"
+          />
+
+        </div>
+
+
+        <div class="vlsi-project-content">
+
+          <span class="vlsi-project-number">
+            VLSI PROJECT 03
+          </span>
+
+          <h4>
+            Digital Clock FSM
+          </h4>
+
+
+          <ul>
+
+            <li>
+              Designed a digital clock using finite state machine concepts.
+            </li>
+
+            <li>
+              Implemented sequential logic for clock state transitions.
+            </li>
+
+            <li>
+              Used Verilog RTL for the digital clock design.
+            </li>
+
+            <li>
+              Tested the design through simulation and functional verification.
+            </li>
+
+          </ul>
+
+
+          <a
+            href="https://github.com/ANIRUDH-87/Digital-Clock-FSM"
+            target="_blank"
+            class="vlsi-github-btn"
+          >
+            GitHub Repository ↗
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- =========================================
+           PROJECT 02 — ALU VERIFICATION
+           ========================================= -->
+
+      <article class="vlsi-project-card">
+
+        <div class="vlsi-project-image">
+
+          <!-- ADD ALU PROJECT IMAGE HERE -->
+
+          <img
+            src="ALU.png"
+            alt="ALU Verification Project"
+          />
+
+        </div>
+
+
+        <div class="vlsi-project-content">
+
+          <span class="vlsi-project-number">
+            VLSI PROJECT 04
+          </span>
+
+          <h4>
+            ALU Verification
+          </h4>
+
+
+          <ul>
+
+            <li>
+              Designed a verification environment for an ALU.
+            </li>
+
+            <li>
+              Verified arithmetic and logical operations.
+            </li>
+
+            <li>
+              Applied simulation-based verification techniques.
+            </li>
+
+            <li>
+              Used SystemVerilog concepts for functional verification.
+            </li>
+
+          </ul>
+
+
+          <a
+            href="https://github.com/ANIRUDH-87/ALU_Verification"
+            target="_blank"
+            class="vlsi-github-btn"
+          >
+            GitHub Repository ↗
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =========================================
+           PROJECT 03 — DUAL PORT RAM
+           ========================================= -->
+
+      <article class="vlsi-project-card">
+
+        <div class="vlsi-project-image">
+
+          <!-- ADD DUAL PORT RAM IMAGE HERE -->
+
+          <img
+            src="DUAL_RAM.png"
+            alt="Dual Port RAM Design"
+          />
+
+        </div>
+
+
+        <div class="vlsi-project-content">
+
+          <span class="vlsi-project-number">
+            VLSI PROJECT 05
+          </span>
+
+          <h4>
+            Dual-Port RAM
+          </h4>
+
+
+          <ul>
+
+            <li>
+              Designed a dual-port RAM using RTL design principles.
+            </li>
+
+            <li>
+              Supported independent read and write operations.
+            </li>
+
+            <li>
+              Implemented memory access using Verilog.
+            </li>
+
+            <li>
+              Verified memory read and write functionality through simulation.
+            </li>
+
+          </ul>
+
+
+          <a
+            href="https://github.com/ANIRUDH-87/Dual_Port_RAM"
+            target="_blank"
+            class="vlsi-github-btn"
+          >
+            GitHub Repository ↗
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+
+
+      <!-- PROJECT 05 — UART PROTOCOL -->
+
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     SKILLS
+     ===================================================== -->
+
+<section id="skills" class="skills-section">
+
+  <div class="skills-heading">
+    <span>TECHNICAL PROFILE</span>
+    <h2>My Skills</h2>
+  </div>
+
+
+  <div class="skills-track">
+
+    <!-- WEB DEVELOPMENT -->
+    <div class="skill-category">
+
+      <div class="skill-category-number">01</div>
+
+      <h3>Web Development</h3>
+
+      <div class="skill-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Flask</span>
+        <span>REST APIs</span>
+        <span>C#</span>
+        <span>Database Integration</span>
+      </div>
+
+    </div>
+
+
+    <!-- AI & DATA SCIENCE -->
+    <div class="skill-category">
+
+      <div class="skill-category-number">02</div>
+
+      <h3>AI & Data Science</h3>
+
+      <div class="skill-list">
+        <span>Python</span>
+        <span>NumPy</span>
+        <span>Pandas</span>
+        <span>SQL</span>
+        <span>EDA</span>
+        <span>Data Cleaning</span>
+        <span>Scikit-learn</span>
+        <span>Machine Learning</span>
+        <span>Matplotlib</span>
+        <span>Supervised Learning</span>
+      </div>
+
+    </div>
+
+
+    <!-- VLSI DESIGN -->
+    <div class="skill-category">
+
+      <div class="skill-category-number">03</div>
+
+      <h3>VLSI Design</h3>
+
+      <div class="skill-list">
+        <span>Digital Electronics</span>
+        <span>Verilog</span>
+        <span>SystemVerilog</span>
+        <span>RTL Design</span>
+        <span>Communication Protocols</span>
+        <span>AMBA Protocol</span>
+        <span>FPGA Basics</span>
+        <span>Static Timing Analysis</span>
+        <span>CMOS Fundamentals</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CERTIFICATIONS
+     ===================================================== -->
+
+<section id="certifications" class="certifications-section">
+
+  <div class="certifications-container">
+
+    <!-- Heading -->
+    <div class="certifications-heading">
+
+      <span>PROFESSIONAL CREDENTIALS</span>
+
+      <h2>
+        Certifications
+      </h2>
+
+      <p>
+        Certifications and professional learning completed across
+        VLSI, AI, data science, and emerging technologies.
+      </p>
+
+    </div>
+
+
+    <!-- Certification list -->
+    <div class="certifications-list">
+
+
+      <!-- 01 -->
+      <article class="certificate-item">
+
+        <div class="certificate-number">
+          01
+        </div>
+
+        <div class="certificate-content">
+
+          <div class="certificate-top">
+
+            <div>
+
+              <h3>
+                VLSI Design
+              </h3>
+
+              <p class="certificate-issuer">
+                Internshala
+              </p>
+
+            </div>
+
+            <span class="certificate-category">
+              VLSI
+            </span>
+
+          </div>
+
+          <p class="certificate-description">
+              Completed VLSI Design training covering digital electronics,
+  Verilog, RTL design, and fundamental semiconductor concepts.
+          </p>
+
+          <button
+            type="button"
+            class="certificate-view-btn"
+            data-certificate="certificate-vlsi"
+            data-pdf="VLSI_internshala.pdf"
+
+          >
+            View Certificate
+            <span>↗</span>
+          </button>
+
+        </div>
+
+      </article>
+
+
+<!-- 02 -->
+<article class="certificate-item">
+
+  <div class="certificate-number">
+    02
+  </div>
+
+  <div class="certificate-content">
+
+    <div class="certificate-top">
+
+      <div>
+
+        <h3>
+          Machine Learning at the Edge
+        </h3>
+
+        <p class="certificate-issuer">
+          ArmEducationX
+        </p>
+
+      </div>
+
+      <span class="certificate-category">
+        AI / ML
+      </span>
+
+    </div>
+
+    <p class="certificate-description">
+      Completed ML101: Machine Learning at the Edge:
+      A Practical Introduction from Arm, covering
+      practical machine learning concepts for edge
+      computing.
+    </p>
+
+    <button
+      type="button"
+      class="certificate-view-btn"
+      data-certificate="certificate-aiml"
+      data-pdf="ARMEducationML_EDX.pdf"
+    >
+      View Certificate
+      <span>↗</span>
+    </button>
+
+  </div>
+
+</article>
+
+      <!-- 03 -->
+      <article class="certificate-item">
+
+        <div class="certificate-number">
+          03
+        </div>
+
+        <div class="certificate-content">
+
+          <div class="certificate-top">
+
+            <div>
+
+              <h3>
+                Introduction to Internet of Things
+              </h3>
+
+              <p class="certificate-issuer">
+                NPTEL
+              </p>
+
+            </div>
+
+            <span class="certificate-category">
+              IoT
+            </span>
+
+          </div>
+
+          <p class="certificate-description">
+            Academic certification covering the fundamentals
+            and concepts of Internet of Things.
+          </p>
+
+          <button
+            type="button"
+            class="certificate-view-btn"
+            data-certificate="certificate-iot"
+            data-pdf="NPTEL_IOT.pdf"
+
+
+          >
+            View Certificate
+            <span>↗</span>
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <!-- 04 -->
+      <article class="certificate-item">
+
+        <div class="certificate-number">
+          04
+        </div>
+
+        <div class="certificate-content">
+
+          <div class="certificate-top">
+
+            <div>
+
+              <h3>
+                Data Science Internship
+              </h3>
+
+              <p class="certificate-issuer">
+                VCODEZ
+              </p>
+
+            </div>
+
+            <span class="certificate-category">
+              DATA SCIENCE
+            </span>
+
+          </div>
+
+          <p class="certificate-description">
+            Internship experience focused on data analysis,
+            preprocessing, exploratory analysis, and machine learning.
+          </p>
+
+          <button
+            type="button"
+            class="certificate-view-btn"
+            data-certificate="certificate-datascience"
+            data-pdf="VcodeZ_Intern_certificate.pdf"
+
+          >
+            View Certificate
+            <span>↗</span>
+          </button>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOBBIES / INTERESTS SECTION -->
+
+<section id="hobbies" class="beyond-section">
+
+
+
+<!-- HOBBIES / INTERESTS SECTION -->
+<section id="hobbies" class="beyond-section">
+
+  <!-- Center Heading -->
+  <div class="beyond-heading-center">
+    <span>PERSONAL INTERESTS</span>
+    <h2>Hobbies / Interests</h2>
+    <p>
+      A few things I enjoy exploring beyond my engineering and professional work.
+    </p>
+  </div>
+
+  <!-- Horizontally scrolling hobbies -->
+  <div class="beyond-track">
+
+    <div class="beyond-scroll-content">
+
+      <!-- 01 Content Creation -->
+      <a href="https://www.instagram.com/electrofy__?stkn=MWt1dGJ4ZDJyM2k4cw=="
+         target="_blank"
+         class="interest-item interest-featured">
+
+        <div class="interest-image">
+          <img src="cont.jpeg" alt="Content Creation">
+        </div>
+
+        <div class="interest-content">
+          <span>01</span>
+          <h3>Content Creation</h3>
+          <p>
+            Creating educational technology and engineering content
+            and explaining concepts in a simple way.
+          </p>
+          <small>Navigate to Page ↗</small>
+        </div>
+
+      </a>
+
+
+      <!-- 02 Puzzles -->
+      <div class="interest-item">
+
+        <div class="interest-content">
+          <span>02</span>
+          <h3>
+  <i class="fa-solid fa-puzzle-piece hobby-icon"></i>
+  Puzzles & Sudoku
+</h3>
+          <p>
+            I enjoy solving logical puzzles, recognizing patterns,
+            and working through problems step by step.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- 03 Chess -->
+      <div class="interest-item">
+
+        <div class="interest-content">
+          <span>03</span>
+          <h3>
+  <i class="fa-solid fa-chess-knight hobby-icon"></i>
+  Chess
+</h3>
+          <p>
+            I enjoy strategy, planning, calculation, and thinking
+            several moves ahead.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- 04 Cricket -->
+      <div class="interest-item">
+
+        <div class="interest-content">
+          <span>04</span>
+          <h3>
+<h3>
+<h3>
+  <i class="fa-solid fa-baseball-bat-ball hobby-icon"></i>
+  Cricket
+
+
+</h3>
+          <p>
+            Cricket is my favourite outdoor sport and helps me
+            stay active and refreshed.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- 05 Mathematics & Physics -->
+      <div class="interest-item">
+
+        <div class="interest-content">
+          <span>05</span>
+          <h3>
+  <i class="fa-solid fa-square-root-variable hobby-icon"></i>
+  Mathematics & Physics
+</h3>
+          <p>
+            I have a strong curiosity about mathematical ideas,
+            physical systems, and how things work.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- 06 Science Fiction -->
+      <div class="interest-item">
+
+        <div class="interest-content">
+          <span>06</span>
+          <h3>
+  <i class="fa-solid fa-atom hobby-icon"></i>
+  Science Fiction
+</h3>
+          <p>
+            I enjoy science-fiction movies that explore technology,
+            physics, future possibilities, and new ideas.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- 07 Reading & Exploring Ideas -->
+      <div class="interest-item">
+
+        <div class="interest-content">
+          <span>07</span>
+          <h3>
+  <i class="fa-solid fa-book-open hobby-icon"></i>
+  Reading & Exploring Ideas
+</h3>
+          <p>
+            I read English books to improve my communication and knowledge, and Telugu mythological books to explore ancient Vedic traditions
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- DUPLICATE FOR SEAMLESS INFINITE SCROLL -->
+
+      <!-- 01 -->
+      <a href="https://www.instagram.com/electrofy__?stkn=MWt1dGJ4ZDJyM2k4cw=="
+         target="_blank"
+         class="interest-item interest-featured">
+
+        <div class="interest-image">
+          <img src="cont.jpeg" alt="Content Creation">
+        </div>
+
+        <div class="interest-content">
+          <span>01</span>
+          <h3>Content Creation</h3>
+          <p>
+            Creating educational technology and engineering content
+            and explaining concepts in a simple way.
+          </p>
+          <small>Navigate to page ↗</small>
+        </div>
+
+      </a>
+
+
+      <!-- 02 -->
+      <div class="interest-item">
+        <div class="interest-content">
+          <span>02</span>
+          <h3>Puzzles & Sudoku</h3>
+          <p>
+            I enjoy solving logical puzzles, recognizing patterns,
+            and working through problems step by step.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 03 -->
+      <div class="interest-item">
+        <div class="interest-content">
+          <span>03</span>
+          <h3>Chess</h3>
+          <p>
+            I enjoy strategy, planning, calculation, and thinking
+            several moves ahead.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 04 -->
+      <div class="interest-item">
+        <div class="interest-content">
+          <span>04</span>
+          <h3>Cricket</h3>
+          <p>
+            Cricket is my favourite outdoor sport and helps me
+            stay active and refreshed.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 05 -->
+      <div class="interest-item">
+        <div class="interest-content">
+          <span>05</span>
+          <h3>Mathematics & Physics</h3>
+          <p>
+            I have a strong curiosity about mathematical ideas,
+            physical systems, and how things work.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 06 -->
+      <div class="interest-item">
+        <div class="interest-content">
+          <span>06</span>
+          <h3>Science Fiction</h3>
+          <p>
+            I enjoy science-fiction movies that explore technology,
+            physics, future possibilities, and new ideas.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 07 -->
+      <div class="interest-item">
+        <div class="interest-content">
+          <span>07</span>
+          <h3>Reading & Exploring Ideas</h3>
+          <p>
+            I read to improve my communication skills and explore
+            Telugu mythological literature, philosophy, and ideas
+            about the mysteries of the universe.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
   <!-- Contribution / Call-to-Action Message -->
   <div class="contribution-message">
@@ -375,17 +1954,17 @@
 
   <div class="resume-bottom">
     <a
-      href="https://drive.google.com/file/d/1O1SaOuhQsUSRGkbS5qLaiC6JYTQWa8ND/view?usp=sharing"
+      href="https://drive.google.com/file/d/1AYDPdddKdXpguBrXmmGu1gkfIbe9sAwZ/view?usp=sharing"
       class="btn-outline"
       target="_blank"
     >
       Download Resume
     </a>
-  </div>
+  </div>  
 
   <!-- FOOTER SECTION -->
-  <footer class="footer">
-    <div class="footer-top">
+<footer id="contact" class="footer">
+      <div class="footer-top">
       <div class="footer-contact">
         <p>📞 <a href="tel:+9187905444362">+91 8790544362</a></p>
         <p>✉️ <a href="mailto:chvsanirudh@gmail.com">chvsanirudh@gmail.com</a></p>
@@ -397,8 +1976,8 @@
         </p>
       </div>
       <div class="footer-nav">
-        <p><strong>Anirudh Ch</strong></p>
-        <p>Data Science Intern | AI/ML & Core Electronics Enthusiast</p>
+        <p><strong>Venkata Sai Anirudh Ch</strong></p>
+        <p>Development Intern | AI/ML & Core Electronics Enthusiast</p>
         <nav>
           <a href="#home">Home</a>
           <a href="#about">Introduction</a>
@@ -412,8 +1991,37 @@
     <p class="footer-bottom">© 2025 Anirudh Ch. All rights reserved.</p>
   </footer>
 
-  <!-- JS file for future animations -->
-  <script src="script.js"></script>
+
+
+<div class="certificate-modal" id="certificateModal" aria-hidden="true">
+
+  <div class="certificate-modal-overlay"></div>
+
+  <div class="certificate-modal-content">
+
+    <button
+      type="button"
+      class="certificate-modal-close"
+      id="certificateModalClose"
+      aria-label="Close certificate"
+    >
+      ×
+    </button>
+
+    <iframe
+      id="certificateModalPdf"
+      title="Certificate PDF"
+    ></iframe>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
 </body>
 </html>
 
